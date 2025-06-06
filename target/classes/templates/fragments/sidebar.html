@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="sidebar">
+    <aside class="sidebar">
+        <ul>
+			<li><a class="dropdown-item" th:href="@{/Huyen}">Huyện</a></li>
+			<li><a class="dropdown-item" th:href="@{/LoaiHinh}">Loại Hình Doanh Nghiệp</a></li>
+			<li><a class="dropdown-item" th:href="@{/LoaiPhieu}">Loại Phiếu</a></li>
+			<li><a class="dropdown-item" th:href="@{/LoaiVanBan}">Loại Văn Bản</a></li>
+			<li><a class="dropdown-item" th:href="@{/SanPham}">Sản Phẩm Chăn Nuôi</a></li>
+			<li><a class="dropdown-item" th:href="@{/VatNuoi}">Vật Nuôi</a></li>
+        </ul>
+    </aside>
+</div>
+</body>
+</html>
