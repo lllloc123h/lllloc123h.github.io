@@ -159,7 +159,7 @@ insert into
 	users (User_name, Password, is_admin)
 values
 	('HuuLoc', '123', 1),
-	('NhatKha', '123', 0)
+	('NhatKha', '$2a$10$XJdL9eKNYA2RqUfE3FqnQuylsuKPjTIHEq/xygEZsqgUIjwDa7BXu', 0)-- Khannps39199@
 insert into
 	loai_phieu (ten_phieu)
 values
