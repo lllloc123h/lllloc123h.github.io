@@ -1,0 +1,133 @@
+<template>
+  <div class="container-fluid row">
+    <div class="aside col-3">
+      <Dashboard :listDashBoard="listDashBoard"></Dashboard>
+    </div>
+    <div class="article col-9">
+      <form @submit.prevent="props.action === 'create' ? submitForm() : submitUpdateForm()">
+        <div class="mb-3" :style="(props.action === 'view' || props.action === 'create') ? ' display:none;' : ''">
+          <label :for="id" class="form-label text-capitalize"></label>
+          <input :id="id" v-model="formData.id" v-if="props.action !== 'create'" :hidden="props.action === 'view'"
+            type="number" class="form-control" :placeholder="`Enter id`" />
+        </div>
+        <div class="mb-3">
+          <label :for="name" class="form-label text-capitalize">name</label>
+          <input :id="name" v-model="formData.name" type="text" class="form-control" :placeholder="`Enter name`" />
+        </div>
+
+        <div class="mb-3">
+          <label :for="principalId" class="form-label text-capitalize">principalId</label>
+          <input :id="principalId" v-model="formData.principalId" type="number" class="form-control"
+            :placeholder="`Enter principalId`" />
+        </div>
+
+        <div class="mb-3">
+          <label :for="version" class="form-label text-capitalize">version</label>
+          <input :id="version" v-model="formData.version" type="number" class="form-control"
+            :placeholder="`Enter version`" />
+        </div>
+
+        <div class="mb-3">
+          <label :for="definition" class="form-label text-capitalize">definition</label>
+          <input :id="definition" v-model="formData.definition" type="text" class="form-control"
+            :placeholder="`Enter definition`" />
+        </div>
+
+
+        <button type="submit" :disable="props.action == 'view'" class="btn btn-primary">
+          <span v-if="props.action === 'create'">Create</span>
+          <span v-else-if="props.action === 'create'">Create</span>
+          <span v-else>Update</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</template>
+<style></style>
+
+<script setup>
+import { reactive, ref, onMounted, watch } from 'vue'
+import { formatDate } from '../../Module/CommonsFunctions.js'
+import Dashboard from '../../Module/Dashboard.vue'
+import { useRouter } from 'vue-router'
+const router = useRouter()
+import axios from 'axios'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import 'bootstrap/dist/css/bootstrap.min.css'
+const props = defineProps({
+  TableName: {
+    type: String,
+    required: true
+  },
+  action: {
+    type: String,
+    required: true
+  },
+  id: {
+    type: String,
+    required: true
+  }
+})
+
+const formData = reactive({
+  name: '',
+  principalId: '',
+  diagramId: '',
+  version: '',
+  definition: '',
+})
+
+const listDashBoard = [
+  "Ap",
+  "Huyen",
+  "LoaiHinhDoanhNghiep",
+  "LoaiPhieu",
+  "LoaiVanBan",
+  "QuyMo",
+  "SpChanNuoi",
+  "Sysdiagrams",
+  "Tinh",
+  "Users",
+  "VatNuoi",
+  "Xa",
+]
+
+async function submitUpdateForm() {
+  console.log(formData)
+  try {
+    const response = await axios.put(`http://localhost:8080/api/admin/${props.TableName}`, formData)
+    console.log('Insert successful:', response.data)
+    router.push(`/Admin/${props.TableName}`)
+  } catch (error) {
+    console.error('Insert failed:', error)
+  }
+}
+
+
+async function submitForm() {
+  console.log(formData)
+  try {
+    const response = await axios.post(`http://localhost:8080/api/admin/${props.TableName}`, formData)
+    console.log('Insert successful:', response.data)
+    router.push(`/Admin/${props.TableName}`)
+  } catch (error) {
+    console.error('Insert failed:', error)
+  }
+}
+const fetchData = async () => {
+
+  console.log(props.TableName + props.action)
+  if (!props.TableName) return
+  try {
+    const response = await axios.get(`http://localhost:8080/api/admin/${props.TableName}/${props.id}`)
+    response.data.createdAt = formatDate(response.data.createdAt)
+    response.data.updatedAt = formatDate(response.data.updatedAt)
+    Object.assign(formData, response.data)
+  } catch (err) {
+    console.error('Get failed:', err)
+  }
+}
+
+onMounted(fetchData)
+watch(() => props.id, fetchData)
+</script>
