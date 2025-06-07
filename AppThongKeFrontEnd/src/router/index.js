@@ -2,28 +2,24 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 // Import modular route arrays
 import adminRoutes from './Admin/AdminRouter.js'
-import userRoutes from './User/UserRouter.js'
-import authService from '../api/header-injectable-JWT.js'
-import adminLayout from '../Layouts/AdminLayout.vue'
-import UserLayout from '../Layouts/UserLayout.vue'
-import Oauth2 from '../components/Module/Oauth2Success.vue'
-import Unauthorized from '../components/Module/403View.vue'
 import App from '../App.vue'
+import Login from '../components/Login.vue'
 // Merge all routes
 const routes = [
-    {
-        path: '/',
-        component: UserLayout,
-        children: [
-            ...userRoutes,
-        ]
-    },
     {
         path: '/',
         component: App,
         children: [
             ...adminRoutes,
         ]
+    },
+    {
+        path: '/login',
+        component: Login,
+    },
+    {
+        path: '/',
+        component: Login,
     }
 
 ]
