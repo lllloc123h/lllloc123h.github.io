@@ -1,33 +1,7 @@
 <template>
-    <div class="header">
-	    <h1>Chi cục thống kê tỉnh Đồng Tháp</h1>
-	    <form @submit.prevent="Logout" method="post">
-	        <button type="submit" class="logout-btn">Đăng xuất</button>
-	    </form>
-	</div>
+    
 <div class="container-fluid">
     <div class="row">
-        <!-- Sidebar -->
-		<nav class="col-md-2 sidebar py-4">
-		            <h5 class="text-center mb-4">Danh mục</h5>
-		            <ul class="nav flex-column">
-		                <li class="nav-item dropdown">
-		                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Quản lý</a>
-		                    <ul class="dropdown-menu dropdown-menu-dark">
-		                        <li><a class="dropdown-item" th:href="@{/Ap}">Ấp</a></li> <li><a class="dropdown-item" th:href="@{/Huyen}">Huyện</a></li>
-		                        <li><a class="dropdown-item" th:href="@{/LoaiHinh}">Loại Hình Doanh Nghiệp</a></li>
-		                        <li><a class="dropdown-item" th:href="@{/LoaiPhieu}">Loại Phiếu</a></li>
-		                        <li><a class="dropdown-item" th:href="@{/LoaiVanBan}">Loại Văn Bản</a></li>
-		                        <li><a class="dropdown-item" th:href="@{/SanPham}">Sản Phẩm Chăn Nuôi</a></li>
-		                        <li><a class="dropdown-item" th:href="@{/VatNuoi}">Vật Nuôi</a></li>
-		                        <li><a class="dropdown-item" th:href="@{/QuyMo}">Quy Mô</a></li>
-		                        <li><a class="dropdown-item" th:href="@{/Xa}">Xã</a></li>
-		                    </ul>
-		                </li>
-		            </ul>
-		        </nav>
-
-        <!-- Main Content -->
         <main class="col-md-10 ms-sm-auto px-4 pt-4">
             <h2 class="text-center">Danh Mục Loại Văn Bản</h2>
 

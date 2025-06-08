@@ -9,7 +9,7 @@
         <transition name="fade">
           <ul class="list" v-show="isVisible[index]">
             <li class="Item" v-for="(child, i) in item.children" :key="i">
-              <router-link to="#" class="link">{{ child }}</router-link>
+              <router-link :to="child.path" class="link">{{ child.name }}</router-link>
             </li>
           </ul>
         </transition>
@@ -31,8 +31,45 @@ const menuItems = [
   {
     title: 'DANH MỤC',
     children: [
-      'Danh mục loại phiếu', 'Danh mục loại hình', 'Danh mục loại văn bản', 'Quy Mô', 'Sản Phẩm', 'Vật nuôi',
-      'Tỉnh', 'Huyện', 'Xã', 'Ấp'
+      {name:'Danh mục loại phiếu',
+        path:'/Huyen'
+      }, {
+        name:'Danh mục loại hình',
+        path:'/LoaiHinh'
+      }, {
+        name:'Danh mục loại văn bản',
+        path:'/LoaiVanBan'
+      },
+      {
+        name:'Quy Mô',
+        path:'/LoaiVanBan'
+      }, 
+      {
+        name:'Sản Phẩm',
+        path:'/LoaiVanBan'
+
+      }, 
+      {
+        name:'Vật nuôi',
+        path:'/LoaiVanBan'
+
+      },
+      {
+        name:'Tỉnh',
+        path:'/LoaiVanBan'
+      }, 
+      {
+        name:'Huyện',
+        path:'/LoaiVanBan'
+      },
+      {
+        name:'Xã',
+        path:'/LoaiVanBan'
+      } , 
+      {
+        name:'Ấp',
+        path:'/LoaiVanBan'
+      }
     ]
   },
   {
@@ -140,16 +177,21 @@ const menuItems = [
 .arrow.open {
   transform: rotate(180deg);
 }
-
+.ItemMenu{
+    list-style-type: none;
+    margin-right: 5%;
+}
 .list {
   background-color: #34465d;
   padding: 10px;
   margin-top: 5px;
   border-radius: 6px;
+  
 }
 
 .Item {
   margin: 6px 0;
+  list-style-type: none;
 }
 
 .link {
@@ -162,8 +204,10 @@ const menuItems = [
 .link:hover {
   color: #50b7f5;
 }
+#menu{
+    padding: 0;
+}
 
-/* Transition for opening/closing submenu */
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s ease;
