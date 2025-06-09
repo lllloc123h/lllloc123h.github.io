@@ -2,7 +2,7 @@
     
 <div class="container-fluid">
     <div class="row">
-        <main class="col-md-10 ms-sm-auto px-4 pt-4">
+        <main class=" ms-sm-auto px-4 pt-4">
             <h2 class="text-center">Danh Mục Loại Văn Bản</h2>
 
             <!-- Form thêm mới loại văn bản -->

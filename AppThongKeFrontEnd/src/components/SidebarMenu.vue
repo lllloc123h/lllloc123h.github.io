@@ -1,22 +1,25 @@
 <template>
-  <div id="Sidebar" class="sidebar">
-    <ul id="menu">
-      <li class="ItemMenu" v-for="(item, index) in menuItems" :key="index">
-        <button class="menu-btn" @click="toggleList(index)">
-          <h5>{{ item.title }}</h5>
-          <span class="arrow" :class="{ open: isVisible[index] }">▼</span>
-        </button>
-        <transition name="fade">
-          <ul class="list" v-show="isVisible[index]">
-            <li class="Item" v-for="(child, i) in item.children" :key="i">
-              <router-link :to="child.path" class="link">{{ child.name }}</router-link>
-            </li>
-          </ul>
-        </transition>
-      </li>
-    </ul>
+  <div class="row">
+    <div id="Sidebar" class="sidebar col-sm-3">
+      <ul id="menu">
+        <li class="ItemMenu" v-for="(item, index) in menuItems" :key="index">
+          <button class="menu-btn" @click="toggleList(index)">
+            <h5>{{ item.title }}</h5>
+            <span class="arrow" :class="{ open: isVisible[index] }">▼</span>
+          </button>
+          <transition name="fade">
+            <ul class="list" v-show="isVisible[index]">
+              <li class="Item" v-for="(child, i) in item.children" :key="i">
+                <router-link :to="child.path" class="link">{{ child.name }}</router-link>
+              </li>
+            </ul>
+          </transition>
+        </li>
+      </ul>
+    </div>
+    <RouterView class="col-lg-9 view"></RouterView>
   </div>
-</template>
+</template> 
 
 <script setup>
 import { ref } from 'vue'
@@ -32,7 +35,7 @@ const menuItems = [
     title: 'DANH MỤC',
     children: [
       {name:'Danh mục loại phiếu',
-        path:'/Huyen'
+        path:'/LoaiPhieu'
       }, {
         name:'Danh mục loại hình',
         path:'/LoaiHinh'
@@ -42,33 +45,33 @@ const menuItems = [
       },
       {
         name:'Quy Mô',
-        path:'/LoaiVanBan'
+        path:'/QuyMo'
       }, 
       {
         name:'Sản Phẩm',
-        path:'/LoaiVanBan'
+        path:'/SanPham'
 
       }, 
       {
         name:'Vật nuôi',
-        path:'/LoaiVanBan'
+        path:'/VatNuoi'
 
       },
       {
         name:'Tỉnh',
-        path:'/LoaiVanBan'
+        path:'/Tinh'
       }, 
       {
         name:'Huyện',
-        path:'/LoaiVanBan'
+        path:'/Huyen'
       },
       {
         name:'Xã',
-        path:'/LoaiVanBan'
+        path:'/Xa'
       } , 
       {
         name:'Ấp',
-        path:'/LoaiVanBan'
+        path:'/Ap'
       }
     ]
   },
@@ -199,6 +202,7 @@ const menuItems = [
   text-decoration: none;
   transition: color 0.2s;
   padding-left: 10px;
+  
 }
 
 .link:hover {

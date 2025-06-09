@@ -9,9 +9,9 @@ import { RouterView } from 'vue-router';
 <template>
   <Header></Header>
   <div>
-    <SidebarMenu></SidebarMenu>
-    <RouterView></RouterView>
+    <SidebarMenu class=""></SidebarMenu>
+    
   </div>
   
 </template>
-<script scope></script>
+<script setup></script>
