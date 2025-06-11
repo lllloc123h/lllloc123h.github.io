@@ -84,6 +84,72 @@ const routes = [
         name: "VatNuoi",
         component: VatNuoi,
       },
+      {
+        path:"DSDiaBan",
+        name:"DSDiaBan",
+        component:()=> import ('../components/CapNhatDiaBan/DSDiaBan.vue')
+      },
+      {
+        path:"MauDiaBan",
+        name:"MauDiaBan",
+        component:()=> import ('../components/CapNhatDiaBan/MauDiaBan.vue')
+      },
+      {
+        path:"DuyetDiaBan",
+        name:"DuyetDiaBan",
+        component:()=> import ('../components/CapNhatDiaBan/DuyetDiaBan.vue')
+      },
+      {
+        path:"BangKe01",
+        name:"BangKe01",
+        component:()=> import ('../components/CapNhatBangKe/BangKe01.vue')
+      },
+      {
+        path:"BangKe02",
+        name:"BangKe02",
+        component:()=> import ('../components/CapNhatBangKe/BangKe02.vue')
+      },
+      {
+        path:"BangKe05",
+        name:"BangKe05",
+        component:()=> import ('../components/CapNhatBangKe/BangKe05.vue')
+      },
+      {
+        path:"BangKe06",
+        name:"BangKe06",
+        component:()=> import ('../components/CapNhatBangKe/BangKe06.vue')
+      },
+      {
+        path:"BangKeTrauBoNho",
+        name:"BangKeTrauBoNho",
+        component:()=> import ('../components/CapNhatBangKe/BangKeTrauBoNho.vue')
+      },
+      {
+        path:"BangKevatNuoiKhac",
+        name:"BangKevatNuoiKhac",
+        component:()=> import ('../components/CapNhatBangKe/BangKevatNuoiKhac.vue')
+      },
+      {
+        path:"PhanBoCoMau",
+        name:"PhanBoCoMau",
+        component:()=> import ('../components/Mau/PhanBoCoMau.vue')
+      },
+      {
+        path:"ChonMauHo",
+        name:"ChonMauHo",
+        component:()=> import ('../components/Mau/ChonMauHo.vue')
+      },
+      {
+        path:"ChonMauHoDacThu",
+        name:"ChonMauHoDacThu",
+        component:()=> import ('../components/Mau/ChonMauHoDacThu.vue')
+      },
+      {
+        path:"ThongKeSL",
+        name:"ThongKeSL",
+        component:()=> import ('../components/Mau/ThongKeSL.vue')
+      },
+      
     ],
   },
   // Nếu bạn có các route không thuộc layout sidebar (ví dụ: trang login riêng biệt, không có sidebar)

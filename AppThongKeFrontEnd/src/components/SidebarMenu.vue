@@ -31,7 +31,7 @@ function toggleList(index) {
 }
 
 const menuItems = [
-  {
+  /*Danh mục*/{
     title: 'DANH MỤC',
     children: [
       {name:'Danh mục loại phiếu',
@@ -75,22 +75,70 @@ const menuItems = [
       }
     ]
   },
-  {
+  /*Cập nhật địa bàn*/{
     title: 'CẬP NHẬT ĐỊA BÀN',
-    children: ['Danh sách địa bàn', 'Chọn mẫu địa bàn', 'Duyệt mẫu địa bàn']
+    children: [
+      {
+        name:'Danh sách địa bàn',
+        path:'/DSDiaBan'
+      },
+      {
+        name:'Chọn mẫu địa bàn',
+        path:'/MauDiaban'
+      },{
+        name:'Duyệt mẫu địa bàn',
+        path:'/DuyetDiaBan'
+      },]
   },
-  {
+  /*Câp nhật bảng kê*/{
     title: 'CẬP NHẬT BẢNG KÊ',
     children: [
-      'Bảng kê 01', 'Bảng kê 02', 'Bảng kê 03', 'Bảng kê 04', 'Bảng kê 05', 'Bảng kê 06',
-      'Bảng kê hộ trâu bò nhỏ', 'Bảng kê hộ vật nuôi khác', 'Theo dõi số lượng hộ theo quy mô nhỏ', 'Tổng hợp số lượng bảng kê'
+      {
+        name:'Bảng kê số 1',
+        path:'/BangKe01'
+      },
+      {
+        name:'Bảng kê số 2',
+        path:'/BangKe02'
+      }, 
+      {
+        name:'Bảng kê số 5',
+        path:'/BangKe05'
+      },
+      {
+        name:'Bảng kê số 6',
+        path:'/BangKe06'
+      },
+      {
+        name:'Bảng kê trâu bò nhỏ',
+        path:'/BangKeTrauBoNho'
+      },
+      {
+        name:'Bảng kê vật nuôi khác',
+        path:'/BangKevatNuoiKhac'
+      },
     ]
   },
-  {
+  /*Chọn mẫu*/{
     title: 'CHỌN MẪU',
     children: [
-      'Bảng phân bố cơ mẫu', 'Chọn mẫu hộ', 'Chọn mẫu hộ nuôi vật nuôi đặc thù',
-      'Thống kê số lượng mẫu', 'Duyệt chuyển điều tra'
+      {
+        name:'Bảng phân bố cỡ mẫu',
+        path:'/PhanBoCoMau'
+      },
+      {
+        name:'Chọn mẫu hộ',
+        path:'/ChonMauHo'
+      },
+      {
+        name:'Chọn mẫu hộ vật nuôi đặt thù',
+        path:'/ChonMauHoDacThu'
+      },
+      {
+        name:'Thống kê số lượng mẫu',
+        path:'/ThongKeSL'
+      },
+      
     ]
   },
   {
