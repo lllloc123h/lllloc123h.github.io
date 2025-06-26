@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory, createWebHashHistory } from "vue-router";
 import Login from "../components/Login.vue";
 import Huyen from "../components/DanhMuc/Huyen.vue";
 import Tinh from "../components/DanhMuc/ThanhPho.vue";
@@ -140,144 +140,144 @@ const routes = [
         component: () => import('../components/Mau/ThongKeSL.vue')
       },
       {
-        path:"QuanLyKi",
-        name:"QuanLyKi",
-        component:()=> import ('../components/QuanLyKiDieuTra/QuanLyKi.vue')
+        path: "QuanLyKi",
+        name: "QuanLyKi",
+        component: () => import('../components/QuanLyKiDieuTra/QuanLyKi.vue')
       },
       {
-        path:"DuyetDuLieu",
-        name:"DuyetDuLieu",
-        component:()=> import ('../components/QuanLyKiDieuTra/DuyetDuLieu.vue')
+        path: "DuyetDuLieu",
+        name: "DuyetDuLieu",
+        component: () => import('../components/QuanLyKiDieuTra/DuyetDuLieu.vue')
       },
       {
-        path:"ChuyenDoiDuLieu",
-        name:"ChuyenDoiDuLieu",
-        component:()=> import ('../components/QuanLyKiDieuTra/ChuyenDoiDuLieu.vue')
+        path: "ChuyenDoiDuLieu",
+        name: "ChuyenDoiDuLieu",
+        component: () => import('../components/QuanLyKiDieuTra/ChuyenDoiDuLieu.vue')
       },
       {
-        path:"QuanLyTB",
-        name:"QuanLyTB",
-        component:()=> import ('../components/QuanLyKiDieuTra/QuanLyThongBao.vue')
+        path: "QuanLyTB",
+        name: "QuanLyTB",
+        component: () => import('../components/QuanLyKiDieuTra/QuanLyThongBao.vue')
       },
       {
-        path:"TheoDoiTienDo",
-        name:"TheoDoiTienDo",
-        component:()=> import ('../components/QuanLyKiDieuTra/TheoDoiTienDo.vue')
+        path: "TheoDoiTienDo",
+        name: "TheoDoiTienDo",
+        component: () => import('../components/QuanLyKiDieuTra/TheoDoiTienDo.vue')
       },
       {
-        path:"ThayTheHoMatMau",
-        name:"ThayTheHoMatMau",
-        component:()=> import ('../components/CapNhatBoSungMau/ThayTheHoMatMau.vue')
+        path: "ThayTheHoMatMau",
+        name: "ThayTheHoMatMau",
+        component: () => import('../components/CapNhatBoSungMau/ThayTheHoMatMau.vue')
       },
       {
-        path:"CapNhatHoQuyMoNho",
-        name:"CapNhatHoQuyMoNho",
-        component:()=> import ('../components/CapNhatBoSungMau/CapNhatHoQuyMoNho.vue')
+        path: "CapNhatHoQuyMoNho",
+        name: "CapNhatHoQuyMoNho",
+        component: () => import('../components/CapNhatBoSungMau/CapNhatHoQuyMoNho.vue')
       },
       {
-        path:"CapNhatHoQuyMoLon",
-        name:"CapNhatHoQuyMoLon",
-        component:()=> import ('../components/CapNhatBoSungMau/CapNhatHoQuyMoLon.vue')
+        path: "CapNhatHoQuyMoLon",
+        name: "CapNhatHoQuyMoLon",
+        component: () => import('../components/CapNhatBoSungMau/CapNhatHoQuyMoLon.vue')
       },
       {
-        path:"DanhSachHoDieuTra",
-        name:"DanhSachHoDieuTra",
-        component:()=> import ('../components/CapNhatBoSungMau/DanhSachHoDieuTra.vue')
+        path: "DanhSachHoDieuTra",
+        name: "DanhSachHoDieuTra",
+        component: () => import('../components/CapNhatBoSungMau/DanhSachHoDieuTra.vue')
       },
       {
-        path:'QuanLydieuTra',
-        name:'QuanLydieuTra',
-        component:()=> import ('../components/CAPI/QuanLyDieuTraVien.vue')
+        path: 'QuanLydieuTra',
+        name: 'QuanLydieuTra',
+        component: () => import('../components/CAPI/QuanLyDieuTraVien.vue')
       },
       {
-        path:'PhanQuyenDieuTra',
-        name:'PhanQuyenDieuTra',
-        component:()=> import ('../components/CAPI/PhanQuyenDieuTra.vue')
+        path: 'PhanQuyenDieuTra',
+        name: 'PhanQuyenDieuTra',
+        component: () => import('../components/CAPI/PhanQuyenDieuTra.vue')
       },
       {
-        path:'TheoDoiPhanQuyen',
-        name:'TheoDoiPhanQuyen',
-        component:()=> import ('../components/CAPI/TheoDoiPhanQuyen.vue')
+        path: 'TheoDoiPhanQuyen',
+        name: 'TheoDoiPhanQuyen',
+        component: () => import('../components/CAPI/TheoDoiPhanQuyen.vue')
       },
       {
-        path:'QuanLyTaiKhoan',
-        name:'QuanLyTaiKhoan',
-        component:()=> import ('../components/QuanLyDieuTraWeb/QuanLyTaiKhoan.vue')
+        path: 'QuanLyTaiKhoan',
+        name: 'QuanLyTaiKhoan',
+        component: () => import('../components/QuanLyDieuTraWeb/QuanLyTaiKhoan.vue')
       },
       {
-        path:'TheoDoiTienDoWeb',
-        name:'TheoDoiTienDoWeb',
-        component:()=> import ('../components/QuanLyDieuTraWeb/TheoDoiTienDo.vue')
+        path: 'TheoDoiTienDoWeb',
+        name: 'TheoDoiTienDoWeb',
+        component: () => import('../components/QuanLyDieuTraWeb/TheoDoiTienDo.vue')
       },
       {
-        path:"QuanLyKi",
-        name:"QuanLyKi",
-        component:()=> import ('../components/QuanLyKiDieuTra/QuanLyKi.vue')
+        path: "QuanLyKi",
+        name: "QuanLyKi",
+        component: () => import('../components/QuanLyKiDieuTra/QuanLyKi.vue')
       },
       {
-        path:"DuyetDuLieu",
-        name:"DuyetDuLieu",
-        component:()=> import ('../components/QuanLyKiDieuTra/DuyetDuLieu.vue')
+        path: "DuyetDuLieu",
+        name: "DuyetDuLieu",
+        component: () => import('../components/QuanLyKiDieuTra/DuyetDuLieu.vue')
       },
       {
-        path:"ChuyenDoiDuLieu",
-        name:"ChuyenDoiDuLieu",
-        component:()=> import ('../components/QuanLyKiDieuTra/ChuyenDoiDuLieu.vue')
+        path: "ChuyenDoiDuLieu",
+        name: "ChuyenDoiDuLieu",
+        component: () => import('../components/QuanLyKiDieuTra/ChuyenDoiDuLieu.vue')
       },
       {
-        path:"QuanLyTB",
-        name:"QuanLyTB",
-        component:()=> import ('../components/QuanLyKiDieuTra/QuanLyThongBao.vue')
+        path: "QuanLyTB",
+        name: "QuanLyTB",
+        component: () => import('../components/QuanLyKiDieuTra/QuanLyThongBao.vue')
       },
       {
-        path:"TheoDoiTienDo",
-        name:"TheoDoiTienDo",
-        component:()=> import ('../components/QuanLyKiDieuTra/TheoDoiTienDo.vue')
+        path: "TheoDoiTienDo",
+        name: "TheoDoiTienDo",
+        component: () => import('../components/QuanLyKiDieuTra/TheoDoiTienDo.vue')
       },
       {
-        path:"ThayTheHoMatMau",
-        name:"ThayTheHoMatMau",
-        component:()=> import ('../components/CapNhatBoSungMau/ThayTheHoMatMau.vue')
+        path: "ThayTheHoMatMau",
+        name: "ThayTheHoMatMau",
+        component: () => import('../components/CapNhatBoSungMau/ThayTheHoMatMau.vue')
       },
       {
-        path:"CapNhatHoQuyMoNho",
-        name:"CapNhatHoQuyMoNho",
-        component:()=> import ('../components/CapNhatBoSungMau/CapNhatHoQuyMoNho.vue')
+        path: "CapNhatHoQuyMoNho",
+        name: "CapNhatHoQuyMoNho",
+        component: () => import('../components/CapNhatBoSungMau/CapNhatHoQuyMoNho.vue')
       },
       {
-        path:"CapNhatHoQuyMoLon",
-        name:"CapNhatHoQuyMoLon",
-        component:()=> import ('../components/CapNhatBoSungMau/CapNhatHoQuyMoLon.vue')
+        path: "CapNhatHoQuyMoLon",
+        name: "CapNhatHoQuyMoLon",
+        component: () => import('../components/CapNhatBoSungMau/CapNhatHoQuyMoLon.vue')
       },
       {
-        path:"DanhSachHoDieuTra",
-        name:"DanhSachHoDieuTra",
-        component:()=> import ('../components/CapNhatBoSungMau/DanhSachHoDieuTra.vue')
+        path: "DanhSachHoDieuTra",
+        name: "DanhSachHoDieuTra",
+        component: () => import('../components/CapNhatBoSungMau/DanhSachHoDieuTra.vue')
       },
       {
-        path:'QuanLydieuTra',
-        name:'QuanLydieuTra',
-        component:()=> import ('../components/CAPI/QuanLyDieuTraVien.vue')
+        path: 'QuanLydieuTra',
+        name: 'QuanLydieuTra',
+        component: () => import('../components/CAPI/QuanLyDieuTraVien.vue')
       },
       {
-        path:'PhanQuyenDieuTra',
-        name:'PhanQuyenDieuTra',
-        component:()=> import ('../components/CAPI/PhanQuyenDieuTra.vue')
+        path: 'PhanQuyenDieuTra',
+        name: 'PhanQuyenDieuTra',
+        component: () => import('../components/CAPI/PhanQuyenDieuTra.vue')
       },
       {
-        path:'TheoDoiPhanQuyen',
-        name:'TheoDoiPhanQuyen',
-        component:()=> import ('../components/CAPI/TheoDoiPhanQuyen.vue')
+        path: 'TheoDoiPhanQuyen',
+        name: 'TheoDoiPhanQuyen',
+        component: () => import('../components/CAPI/TheoDoiPhanQuyen.vue')
       },
       {
-        path:'QuanLyTaiKhoan',
-        name:'QuanLyTaiKhoan',
-        component:()=> import ('../components/QuanLyDieuTraWeb/QuanLyTaiKhoan.vue')
+        path: 'QuanLyTaiKhoan',
+        name: 'QuanLyTaiKhoan',
+        component: () => import('../components/QuanLyDieuTraWeb/QuanLyTaiKhoan.vue')
       },
       {
-        path:'TheoDoiTienDoWeb',
-        name:'TheoDoiTienDoWeb',
-        component:()=> import ('../components/QuanLyDieuTraWeb/TheoDoiTienDo.vue')
+        path: 'TheoDoiTienDoWeb',
+        name: 'TheoDoiTienDoWeb',
+        component: () => import('../components/QuanLyDieuTraWeb/TheoDoiTienDo.vue')
       },
     ],
   },
@@ -292,7 +292,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 });
 
