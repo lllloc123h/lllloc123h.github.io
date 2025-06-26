@@ -209,6 +209,76 @@ const routes = [
         name:'TheoDoiTienDoWeb',
         component:()=> import ('../components/QuanLyDieuTraWeb/TheoDoiTienDo.vue')
       },
+      {
+        path:"QuanLyKi",
+        name:"QuanLyKi",
+        component:()=> import ('../components/QuanLyKiDieuTra/QuanLyKi.vue')
+      },
+      {
+        path:"DuyetDuLieu",
+        name:"DuyetDuLieu",
+        component:()=> import ('../components/QuanLyKiDieuTra/DuyetDuLieu.vue')
+      },
+      {
+        path:"ChuyenDoiDuLieu",
+        name:"ChuyenDoiDuLieu",
+        component:()=> import ('../components/QuanLyKiDieuTra/ChuyenDoiDuLieu.vue')
+      },
+      {
+        path:"QuanLyTB",
+        name:"QuanLyTB",
+        component:()=> import ('../components/QuanLyKiDieuTra/QuanLyThongBao.vue')
+      },
+      {
+        path:"TheoDoiTienDo",
+        name:"TheoDoiTienDo",
+        component:()=> import ('../components/QuanLyKiDieuTra/TheoDoiTienDo.vue')
+      },
+      {
+        path:"ThayTheHoMatMau",
+        name:"ThayTheHoMatMau",
+        component:()=> import ('../components/CapNhatBoSungMau/ThayTheHoMatMau.vue')
+      },
+      {
+        path:"CapNhatHoQuyMoNho",
+        name:"CapNhatHoQuyMoNho",
+        component:()=> import ('../components/CapNhatBoSungMau/CapNhatHoQuyMoNho.vue')
+      },
+      {
+        path:"CapNhatHoQuyMoLon",
+        name:"CapNhatHoQuyMoLon",
+        component:()=> import ('../components/CapNhatBoSungMau/CapNhatHoQuyMoLon.vue')
+      },
+      {
+        path:"DanhSachHoDieuTra",
+        name:"DanhSachHoDieuTra",
+        component:()=> import ('../components/CapNhatBoSungMau/DanhSachHoDieuTra.vue')
+      },
+      {
+        path:'QuanLydieuTra',
+        name:'QuanLydieuTra',
+        component:()=> import ('../components/CAPI/QuanLyDieuTraVien.vue')
+      },
+      {
+        path:'PhanQuyenDieuTra',
+        name:'PhanQuyenDieuTra',
+        component:()=> import ('../components/CAPI/PhanQuyenDieuTra.vue')
+      },
+      {
+        path:'TheoDoiPhanQuyen',
+        name:'TheoDoiPhanQuyen',
+        component:()=> import ('../components/CAPI/TheoDoiPhanQuyen.vue')
+      },
+      {
+        path:'QuanLyTaiKhoan',
+        name:'QuanLyTaiKhoan',
+        component:()=> import ('../components/QuanLyDieuTraWeb/QuanLyTaiKhoan.vue')
+      },
+      {
+        path:'TheoDoiTienDoWeb',
+        name:'TheoDoiTienDoWeb',
+        component:()=> import ('../components/QuanLyDieuTraWeb/TheoDoiTienDo.vue')
+      },
     ],
   },
   // Nếu bạn có các route không thuộc layout sidebar (ví dụ: trang login riêng biệt, không có sidebar)
