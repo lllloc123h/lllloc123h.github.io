@@ -1,12 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
-
-// Import modular route arrays
-// import adminRoutes from './Admin/AdminRouter.js'
-// Không cần import App ở đây
 import Login from "../components/Login.vue";
 import Huyen from "../components/DanhMuc/Huyen.vue";
-// Đổi tên biến để tránh trùng lặp, dùng Tinh cho component ThanhPho.vue
-import Tinh from "../components/DanhMuc/ThanhPho.vue"; // Sử dụng tên Tinh cho ThanhPho.vue
+import Tinh from "../components/DanhMuc/ThanhPho.vue";
 import Xa from "../components/DanhMuc/Xa.vue";
 import ThonAp from "../components/DanhMuc/ThonAp.vue";
 import Loaihinh from "../components/DanhMuc/Loaihinh.vue";
@@ -15,16 +10,11 @@ import LoaivanBan from "../components/DanhMuc/loaivanBan.vue";
 import QuyMo from "../components/DanhMuc/Quymo.vue";
 import SanPham from "../components/DanhMuc/SanPham.vue";
 import VatNuoi from "../components/DanhMuc/VatNuoi.vue";
-// Loại bỏ import trùng lặp ThanhPho nếu đã import Tinh
-// import ThanhPho from "../components/DanhMuc/ThanhPho.vue"; // Đã được import là Tinh
 import SidebarMenu from "../components/SidebarMenu.vue";
 
-// Merge all routes
 const routes = [
   {
     path: "/",
-    // LOẠI BỎ DÒNG NÀY: component: SidebarMenu,
-    // Thay vào đó, chúng ta sẽ chuyển hướng đến một route con mặc định
     component: SidebarMenu, // Chuyển hướng đến một trang mặc định khi vào '/'
     children: [
       // Các route con này sẽ được render vào <RouterView> bên trong SidebarMenu
