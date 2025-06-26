@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: '/lllloc123h.github.io/',
+  base: '/lllloc123h.github.io/AppThongKeFrontEnd/',
   server: { // Thêm phần server này vào
     proxy: {
       '/api-provinces': {
