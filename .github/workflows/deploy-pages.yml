@@ -3,7 +3,7 @@ name: Deploy Vue FE to GitHub Pages
 on:
   push:
     branches: [ main , Deloy]
-    paths: [ 'AppThongKeFrontEnd/**' ]
+    paths: [ '/AppThongKeFrontEnd/**' ]
   workflow_dispatch:
 
 permissions:
