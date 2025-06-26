@@ -2,10 +2,9 @@ name: Deploy Vue FE to GitHub Pages
 
 on:
   push:
-    branches: [ main , Deloy]
+    branches: [ main, Deloy ]
     paths: [ 'AppThongKeFrontEnd/**' ]
-  workflow_dispatch: 
-    
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -27,14 +26,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+
       - name: Clean install dependencies
         run: |
-            cd AppThongKeFrontEnd
-            rm -rf node_modules
-            npm install
+          cd AppThongKeFrontEnd
+          rm -rf node_modules
+          npm install
 
       - name: Build Vue app
         run: |
+          cd AppThongKeFrontEnd
           npm run build
 
       - name: Setup Pages
