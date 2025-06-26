@@ -45,24 +45,29 @@
                             <label for="tinhTp" class="form-label visually-hidden">Tỉnh/TP</label>
                             <select v-model="filters.maTinh" class="form-select" id="tinhTp" @change="fetchDistricts">
                                 <option value="">--Chọn Tỉnh--</option>
-                                <option v-for="tinh in provinces" :key="tinh.ma" :value="tinh.ma">{{ tinh.ma }} - {{ tinh.ten }}</option>
+                                <option v-for="tinh in provinces" :key="tinh.ma" :value="tinh.ma">{{ tinh.ma }} - {{
+                                    tinh.ten }}</option>
                             </select>
                         </div>
                         <div class="col-md-3 col-lg-2 col-sm-6">
                             <label for="quanHuyen" class="form-label visually-hidden">Quận/Huyện</label>
-                            <select v-model="filters.maHuyen" class="form-select" id="quanHuyen" @change="fetchCommunes" :disabled="!districts.length">
+                            <select v-model="filters.maHuyen" class="form-select" id="quanHuyen" @change="fetchCommunes"
+                                :disabled="!districts.length">
                                 <option value="">--Chọn Huyện--</option>
-                                <option v-for="huyen in districts" :key="huyen.ma" :value="huyen.ma">{{ huyen.ma }} - {{ huyen.ten }}</option>
+                                <option v-for="huyen in districts" :key="huyen.ma" :value="huyen.ma">{{ huyen.ma }} - {{
+                                    huyen.ten }}</option>
                             </select>
                         </div>
                         <div class="col-md-3 col-lg-3 col-sm-6">
                             <label for="xaPhuong" class="form-label visually-hidden">Xã/Phường</label>
-                            <select v-model="filters.maXa" class="form-select" id="xaPhuong" :disabled="!communes.length">
+                            <select v-model="filters.maXa" class="form-select" id="xaPhuong"
+                                :disabled="!communes.length">
                                 <option value="">--Chọn Xã/Phường--</option>
-                                <option v-for="xa in communes" :key="xa.ma" :value="xa.ma">{{ xa.ma }} - {{ xa.ten }}</option>
+                                <option v-for="xa in communes" :key="xa.ma" :value="xa.ma">{{ xa.ma }} - {{ xa.ten }}
+                                </option>
                             </select>
                         </div>
-                         <div class="col-md-auto">
+                        <div class="col-md-auto">
                             <button class="btn btn-primary" @click="applyFilters">
                                 <i class="bi bi-search"></i> Xem
                             </button>
@@ -117,8 +122,6 @@
 
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
 
 // --- State Variables ---
 const filters = ref({
@@ -316,17 +319,20 @@ h2 {
 }
 
 .table {
-    white-space: nowrap; /* Ngăn không cho nội dung trong bảng bị xuống dòng */
+    white-space: nowrap;
+    /* Ngăn không cho nội dung trong bảng bị xuống dòng */
 }
 
 .table thead th {
     vertical-align: middle;
     background-color: #e9ecef;
     border-bottom: 2px solid #dee2e6;
-    text-align: center; /* Căn giữa cho tiêu đề cột */
+    text-align: center;
+    /* Căn giữa cho tiêu đề cột */
 }
 
-.table-bordered th, .table-bordered td {
+.table-bordered th,
+.table-bordered td {
     border: 1px solid #dee2e6;
     padding: 0.75rem;
 }
@@ -350,14 +356,17 @@ h2 {
     background-color: #dc3545;
     border-color: #dc3545;
 }
+
 .btn-primary {
     background-color: #007bff;
     border-color: #007bff;
 }
+
 .btn-success {
     background-color: #28a745;
     border-color: #28a745;
 }
+
 .btn-info.text-white {
     background-color: #17a2b8;
     border-color: #17a2b8;
@@ -383,11 +392,18 @@ h2 {
         flex: 1 1 auto;
         margin-bottom: 0.5rem !important;
     }
-    .col-md-2, .col-md-3, .col-lg-2, .col-lg-3, .col-sm-6, .col-md-auto {
+
+    .col-md-2,
+    .col-md-3,
+    .col-lg-2,
+    .col-lg-3,
+    .col-sm-6,
+    .col-md-auto {
         width: 100%;
         margin-bottom: 1rem;
     }
-    .card .row.g-3 > div:last-child {
+
+    .card .row.g-3>div:last-child {
         margin-bottom: 0;
     }
 }
