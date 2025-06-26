@@ -141,29 +141,78 @@ const menuItems = [
       
     ]
   },
-  {
+  /*Quản lý điều tra*/{
     title: 'QUẢN LÝ KỲ ĐIỀU TRA',
     children: [
-      'Quản lý kỳ điều tra', 'Chuyển dữ liệu kỳ điều tra', 'Theo dõi tiến độ',
-      'Quản lý thông báo', 'Duyệt dữ liệu'
+      {name:'Quản lý kỳ điều tra',
+        path:'/QuanLyKi'
+      }, 
+      {name:'Chuyển dữ liệu kỳ điều tra',
+        path:'ChuyenDoiDuLieu'
+      },
+      {name:'Theo dõi tiến độ',
+        path:'/TheoDoiTienDo'
+      },
+      {
+        name:'Quản lý thông báo',
+        path:'/QuanLyTB'
+      },
+     
     ]
   },
-  {
+  /*CẬP NHẬT BỔ SUNG*/{
     title: 'CẬP NHẬT BỔ SUNG',
     children: [
-      'Thay thế hộ mất mẫu', 'Cập nhật hộ quy mô nhỏ', 'Cập nhật hộ quy mô lớn',
-      'Cập nhật hộ điều tra', 'Cập nhật thông tin Doanh nghiệp, HTX'
+     {
+        name:'Thay thế hộ mất mẫu',
+        path:'/ThayTheHoMatMau'
+      }, 
+      {
+        name:'Cập nhật hộ quy mô nhỏ',
+        path:'/CapNhatHoQuyMoNho'
+      },
+      {
+        name:'Cập nhật hộ quy mô lớn',
+        path:'/CapNhatHoQuyMoLon'
+      },
+      {
+        name:'Cập nhật hộ điều tra',
+        path:'/DanhSachHoDieuTra'
+      },
     ]
   },
-  {
+  /*QUẢN LÝ ĐIỀU TRA CAPI*/{
     title: 'QUẢN LÝ ĐIỀU TRA CAPI',
     children: [
-      'Quản lý điều tra viên', 'Phân quyền điều tra', 'Theo dõi phân quyền', 'Theo dõi tiến độ'
+      {
+        name:'Quản lý điều tra viên',
+        path:'/DanhSachHoDieuTra'
+      },
+       {
+        name:'Phân quyền điều tra',
+        path:'/PhanQuyenDieuTra'
+      },
+      {
+        name:'Theo dõi phân quyền',
+        path:'/TheoDoiPhanQuyen'
+      }, 
+      {
+        name: 'Theo dõi tiến độ',
+        path:'/TheoDoiTienDo'
+      },
     ]
   },
   {
     title: 'QUẢN LÝ ĐIỀU TRA WEB',
-    children: ['Quản lý tài khoản', 'Theo dõi tiến độ']
+    children: [
+      {
+        name: 'Quản lý tài khoản',
+        path:'/QuanLyTaiKhoan'
+      },
+      {
+        name: 'Theo dõi tiến độ',
+        path:'/TheoDoiTienDoWeb'
+      },]
   },
   {
     title: 'KIỂM TRA LOGIC PHIẾU',
