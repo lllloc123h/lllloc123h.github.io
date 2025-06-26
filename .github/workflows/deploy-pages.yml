@@ -31,7 +31,7 @@ jobs:
         run: |
             cd AppThongKeFrontEnd
             rm -rf node_modules package-lock.json
-            npm ci
+            npm install
 
       - name: Build Vue app
         run: |
